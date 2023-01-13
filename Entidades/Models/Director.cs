@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades.Models
 {
-    public class Director
+    public class Director : PersonaBase
     {
        
         public int Matricula { get; set; }
