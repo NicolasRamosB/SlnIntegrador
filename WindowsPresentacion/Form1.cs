@@ -78,19 +78,22 @@ namespace WindowsPresentacion
             }
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            Medico medico = new Medico()
-            {
-                IdMedico = textId.Text,
-                Nombre = textNombreMedico.Text,
-                Apellido = textApeMedico.Text,
-                Domicilio = textDomiMedico.Text,
-                Telefono = textTelMedico.Text,
-                Email = textEmailMedico.Text,
-                Especialidad = textEspMedico.Text,
-                Matricula = textMatMedico.Text
-            };
-        }
+        //private void btnEditar_Click(object sender, EventArgs e)
+        //{
+        //    Medico medico = new Medico()
+        //    {
+        //        IdMedico = Convert.ToInt32(textId.Text),
+        //        Nombre = textNombreMedico.Text,
+        //        Apellido = textApeMedico.Text,
+        //        Domicilio = textDomiMedico.Text,
+        //        Telefono = textTelMedico.Text,
+        //        Email = textEmailMedico.Text,
+        //        Especialidad = textEspMedico.Text,
+        //        Matricula = textMatMedico.Text
+        //    };
+
+        //    int filasAfectadas = AdmMedico.Editar()
+
+        //}
     }
 }
