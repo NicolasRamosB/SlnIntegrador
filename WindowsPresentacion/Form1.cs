@@ -35,6 +35,7 @@ namespace WindowsPresentacion
                 }
 
             }
+
             medicoClinico.Items.Add($"Cantidad medicos clinicos: {countMedicoClinico}");
 
             foreach (Habitacion habitacion in AdmHabitacion.Listar())
@@ -51,9 +52,6 @@ namespace WindowsPresentacion
                 }
 
                 listNumeroHabitacion.Items.Add($"Habitacion: {habitacion.Numero},  {ocupado}");
-
-
-
             }
 
             MostrarMedicos();

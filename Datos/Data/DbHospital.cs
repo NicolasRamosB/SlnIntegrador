@@ -13,8 +13,8 @@ namespace Datos
         public DbHospital() : base("KeyDB") { }
 
         public DbSet<Medico> Medicos { get; set; }
-        public DbSet<Paciente> Paciente { get; set;}
-        public DbSet<Habitacion> Habitacion { get; set;}
+        public DbSet<Paciente> Pacientes { get; set;}
+        public DbSet<Habitacion> Habitaciones { get; set;}
 
 
     }

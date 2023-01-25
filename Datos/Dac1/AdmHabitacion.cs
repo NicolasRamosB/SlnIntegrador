@@ -4,12 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Datos;
 using Entidades.Models;
 
 namespace Negocio
 {
     public static class AdmHabitacion
     {
+        private static DbHospital context = new DbHospital();
         public static List<Habitacion> Listar()
         {
             List<Habitacion> listaHabitacion = new List<Habitacion>();
@@ -22,27 +24,32 @@ namespace Negocio
             return listaHabitacion;
         }
 
-        public static List<Habitacion> Listar(string estado)
+        public static Habitacion Listar(string estado)
         {
-            //TODO…
-            return null;
+            
+            return context.Habitaciones.Find(estado);
 
         }
         public static int Insertar(Habitacion Habitacion)
         {
-            //TODO…
-            return 0;
+            context.Habitaciones.Add(Habitacion);
+            return context.SaveChanges();
         }
         public static int Eliminar(int id)
         {
-            //TODO…
+            Habitacion habitacion = context.Habitaciones.Find(id);
+            if (habitacion != null)
+            {
+                context.Habitaciones.Remove(habitacion);
+                return context.SaveChanges() ;  
+            }
             return 0;
         }
 
         public static Habitacion TraerUno(int numero)
         {
-            //TODO…
-            return null;
+           
+            return context.Habitaciones.Find(numero);
         }
 
     }

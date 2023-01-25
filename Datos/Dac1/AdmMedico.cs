@@ -22,16 +22,14 @@ namespace Negocio
 
         public static Medico ListarPorEspecialidad(string especialidad)
         {
-            
-            
             return context.Medicos.Find(especialidad);
-
         }
         public static int Insertar(Medico medico)
         {
             context.Medicos.Add(medico);
             return context.SaveChanges();
         }
+
         public static int Eliminar(int id)
         {
             Medico medicoOrigen = context.Medicos.Find(id);
