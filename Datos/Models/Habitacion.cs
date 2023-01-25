@@ -10,8 +10,11 @@ namespace Entidades.Models
     [Table("Habitacion")]
     public class Habitacion
     {      
+
         public int Id { get; set; }
         public int Numero { get; set; }
-        public bool Estado { get; set; }
+        public string Estado { get; set; }
+        
+        public List<Paciente> Pacientes { get; set;}
     }
 }

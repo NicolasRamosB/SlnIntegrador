@@ -55,13 +55,13 @@
     <Compile Include="Dac1\AdmHabitacion.cs" />
     <Compile Include="Dac1\AdmMedico.cs" />
     <Compile Include="Dac1\AdmPaciente.cs" />
-    <Compile Include="Migrations\202301181647048_initial.cs" />
-    <Compile Include="Migrations\202301181647048_initial.designer.cs">
-      <DependentUpon>202301181647048_initial.cs</DependentUpon>
+    <Compile Include="Migrations\202301250336292_initial.cs" />
+    <Compile Include="Migrations\202301250336292_initial.designer.cs">
+      <DependentUpon>202301250336292_initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202301210053025_firstTest.cs" />
-    <Compile Include="Migrations\202301210053025_firstTest.designer.cs">
-      <DependentUpon>202301210053025_firstTest.cs</DependentUpon>
+    <Compile Include="Migrations\202301251524199_error.cs" />
+    <Compile Include="Migrations\202301251524199_error.designer.cs">
+      <DependentUpon>202301251524199_error.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Clinica.cs" />
@@ -87,11 +87,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202301181647048_initial.resx">
-      <DependentUpon>202301181647048_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202301250336292_initial.resx">
+      <DependentUpon>202301250336292_initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202301210053025_firstTest.resx">
-      <DependentUpon>202301210053025_firstTest.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202301251524199_error.resx">
+      <DependentUpon>202301251524199_error.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

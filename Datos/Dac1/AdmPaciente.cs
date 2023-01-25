@@ -41,5 +41,6 @@ namespace Negocio
             
             return context.Pacientes.Find(nroHistoriaClinica);
         }
+
     }
 }

@@ -47,6 +47,12 @@ namespace Negocio
             return context.Medicos.Find(id);
         }
 
+        public static int Editar(Medico medico)
+        {
+            Medico medicoOrigen = context.Medicos.Find(medico.Id);
+            medicoOrigen.Nombre = medico.Nombre;
+            return context.SaveChanges();
+        }
         
 
     }

@@ -14,14 +14,7 @@ namespace Negocio
         private static DbHospital context = new DbHospital();
         public static List<Habitacion> Listar()
         {
-            List<Habitacion> listaHabitacion = new List<Habitacion>();
-            listaHabitacion.Add(new Habitacion() { Id = 1, Numero = 134, Estado = true });
-            listaHabitacion.Add(new Habitacion() { Id = 2, Numero = 20, Estado = false });
-            listaHabitacion.Add(new Habitacion() { Id = 3, Numero = 394, Estado = true });
-            listaHabitacion.Add(new Habitacion() { Id = 4, Numero = 100, Estado = false });
-            listaHabitacion.Add(new Habitacion() { Id = 5, Numero = 10, Estado = true });
-
-            return listaHabitacion;
+            return context.Habitaciones.ToList();
         }
 
         public static Habitacion Listar(string estado)

@@ -7,13 +7,13 @@ namespace Datos.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.0")]
-    public sealed partial class firstTest : IMigrationMetadata
+    public sealed partial class error : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(firstTest));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(error));
         
         string IMigrationMetadata.Id
         {
-            get { return "202301210053025_firstTest"; }
+            get { return "202301251524199_error"; }
         }
         
         string IMigrationMetadata.Source

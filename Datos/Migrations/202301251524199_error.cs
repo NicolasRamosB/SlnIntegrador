@@ -3,16 +3,16 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class firstTest : DbMigration
+    public partial class error : DbMigration
     {
         public override void Up()
         {
-            AddColumn("dbo.Medico", "IdMedico", c => c.Int(nullable: false));
+            AlterColumn("dbo.Habitacion", "Estado", c => c.String());
         }
         
         public override void Down()
         {
-            DropColumn("dbo.Medico", "IdMedico");
+            AlterColumn("dbo.Habitacion", "Estado", c => c.Boolean(nullable: false));
         }
     }
 }

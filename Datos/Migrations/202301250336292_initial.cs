@@ -18,26 +18,32 @@
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.Medico",
+                "dbo.Pacientes",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Especialidad = c.String(),
-                        Matricula = c.String(),
+                        NroHistorialClinica = c.Int(nullable: false),
+                        MedicoId = c.Int(nullable: false),
+                        HabitacionId = c.Int(nullable: false),
                         Nombre = c.String(),
                         Apellido = c.String(),
                         Domicilio = c.String(),
                         Telefono = c.String(),
                         Email = c.String(),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Habitacion", t => t.HabitacionId, cascadeDelete: true)
+                .ForeignKey("dbo.Medico", t => t.MedicoId, cascadeDelete: true)
+                .Index(t => t.MedicoId)
+                .Index(t => t.HabitacionId);
             
             CreateTable(
-                "dbo.Pacientes",
+                "dbo.Medico",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        NroHistorialClinica = c.Int(nullable: false),
+                        Especialidad = c.String(nullable: false, maxLength: 50, unicode: false),
+                        Matricula = c.String(nullable: false, maxLength: 50, unicode: false),
                         Nombre = c.String(),
                         Apellido = c.String(),
                         Domicilio = c.String(),
@@ -50,8 +56,12 @@
         
         public override void Down()
         {
-            DropTable("dbo.Pacientes");
+            DropForeignKey("dbo.Pacientes", "MedicoId", "dbo.Medico");
+            DropForeignKey("dbo.Pacientes", "HabitacionId", "dbo.Habitacion");
+            DropIndex("dbo.Pacientes", new[] { "HabitacionId" });
+            DropIndex("dbo.Pacientes", new[] { "MedicoId" });
             DropTable("dbo.Medico");
+            DropTable("dbo.Pacientes");
             DropTable("dbo.Habitacion");
         }
     }
